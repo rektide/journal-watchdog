@@ -20,6 +20,7 @@ async function delay(x = 6, a = 1, c = 1000) {
 }
 
 async function main(x = process.argv[2], a = process.argv[3]) {
+	console.log({random: "starting"})
 	return delay(x, a)
 }
 
