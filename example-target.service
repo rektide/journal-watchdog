@@ -1,0 +1,10 @@
+[Unit]
+Description=Example use of journal-watchdog
+BindsTo=example-journal-watchdog.service
+Wants=example-journal-watchdog.service
+After=example-journal-watchdog.service
+
+[Service]
+Type=simple
+ExecStart=/opt/journal-watchdog/random.js
+Restart=always

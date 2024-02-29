@@ -1,15 +1,9 @@
 [Unit]
-Description=Example use of journal-watchdog
+Description=Example service to watch with journal-watchdog
+Wants=example-target.service
 
 [Service]
-Type=simple
-# service to start
-ExecStart=/opt/journal-watchdog/random.js
-# start watchdog
+Type=notify
+ExecStart=/opt/journal-watchdog/journal-watchdog.js example-target.service
 WatchdogSec=5
-# let other Exec*= do notify too, hypothetically
-NotifyAccess=exec
-# start journal-watchdog pointed at this service, to notify as logs come in
-ExecStartPost=/opt/journal-watchdog/journal-watchdog.js example-journal-watchdog
-# keep restarting
 Restart=always
