@@ -1,5 +1,5 @@
 {
-	"name": "restart-if-inactive",
+	"name": "journal-watchdog",
 	"version": "1.0.0",
 	"type": "module",
 	"description": "",
