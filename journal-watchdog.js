@@ -37,10 +37,12 @@ async function journalWatchdog(opts = {}) {
 	// listen to journal
 	const journal = new Journalctl(opts2)
 
+	// ready up immediately
+	notify.ready()
+
 	try {
 		// ready up (i guess? necessary/helpful?)
 		await once(journal, "event")
-		notify.ready()
 
 		// on each journal log
 		for await(const _ of on(journal, "event")) {
@@ -54,7 +56,6 @@ async function journalWatchdog(opts = {}) {
 		try {
 			const done = journal.stop()
 			// TODO: just checking nothing is returned here, delete
-			console.log({done})
 		} catch(err) {
 			// probably fine?
 			LOG({err, msg: "error cleaning up journalctl tailing"})
