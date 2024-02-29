@@ -12,6 +12,8 @@
 	"license": "MIT",
 	"module": "restart-if-inactive.js",
 	"dependencies": {
-		"journalctl": "^1.1.0"
+		"is-main": "^0.4.0",
+		"journalctl": "^1.1.0",
+		"sd-notify": "^2.8.0"
 	}
 }
