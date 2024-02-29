@@ -9,5 +9,8 @@
 	"keywords": [],
 	"author": "rektide de la faye <rektide@voodoowarez.com>",
 	"license": "MIT",
-	"module": "restart-if-inactive.js"
+	"module": "restart-if-inactive.js",
+	"dependencies": {
+		"journalctl": "^1.1.0"
+	}
 }
