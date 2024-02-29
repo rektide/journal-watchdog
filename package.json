@@ -1,6 +1,7 @@
 {
 	"name": "restart-if-inactive",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "",
 	"main": "restart-if-inactive.js",
 	"scripts": {
